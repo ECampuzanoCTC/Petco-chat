@@ -5637,17 +5637,12 @@ reservados.</span></p>
           }
         },
         "userData": {
-          "addressStreet": "910 Heot Parkway",
-          "addressCity": "Ewemuze",
-          "addressPostalCode": "83830",
-          "addressState": "AZ",
-          "phoneNumber": "(719) 525-6847",
-          "customField1Label": "",
-          "customField1": "",
-          "customField2Label": "",
-          "customField2": "",
-          "customField3Label": "",
-          "customField3": ""
+          "firstName": $("input[name='firstName']").val(),
+          "lastName": $("input[name='lastName']").val(),
+          "email": $("input[name='email']").val(),
+          "phoneNumber": $("input[name='phoneNumber']").val(),
+          "petName": $("input[name='petName']").val(),
+          "contactMessage": $("input[name='contactMessage']").val()
         }
       }
     }
