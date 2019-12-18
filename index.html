@@ -5660,7 +5660,8 @@ reservados.</span></p>
         "firstname": $('input[name="firstName"]').val(),
         "lastname": $('input[name="lastName"]').val(),
         "email": $('input[name="email"]').val(),
-        "petname": $('input[name="petName"]').val()
+        "petname": $('input[name="petName"]').val(),
+        "body": $('textarea[name="contactMessage"]').val()
       },
       "formJSON": {
         "wrapper": "<table></table>",
@@ -5692,6 +5693,13 @@ reservados.</span></p>
             "maxlength": "100",
             "placeholder": "Optional",
             "label": "Nombre mascota"
+          },
+          {
+            "id": "cx_webchat_form_contactmessage",
+            "name": "contactmessage",
+            "maxlength": "250",
+            "placeholder": "Optional",
+            "label": "Mensaje"
           }
         ]
       }
@@ -5771,19 +5779,23 @@ reservados.</span></p>
                     <input name="email" type="email" class="form-control" placeholder="Correo electrónico">
                   </div>
                   <div class="form-group">
-                    <input name="petName" type="text" class="form-control" placeholder="Nombre de tu mascota">
+                    <input name="petName"  id="cx_webchat_form_petname" type="text" class="form-control" placeholder="Nombre de tu mascota">
                   </div>
                   <div class="form-group">
-                    <textarea name="" id="" cols="30" rows="4" class="subject form-control" placeholder="Tu mensaje"></textarea>
+                    <textarea name="contactMessage" id="" cols="30" rows="4" class="subject form-control" placeholder="Tu mensaje"></textarea>
                   </div>
                 </form>
               </div>
             </div>
             <div class="modal-footer">
+                <a href="mailto:cc@petco.mypurecloud.com?
+                &amp;subject=[TEST]
+                &amp;body=[TEST]">
+                Envìanos un correo</a>
               <a href="mailto:cc@petco.mypurecloud.com" class="button btn rounded-0 btn-primary"
                  >Envia un correo</a>
               <div class="button btn rounded-0 btn-primary" id="chat-button-form" onclick="customPlugin.command('WebChat.open', getAdvancedConfig());">Chatea con Petco</div>
-              <button type="button" class="btn rounded-0 btn-secondary" data-dismiss="modal">Cancelar</button>
+              <button type="button" class="btn rounded-0 btn-secondary" data-dismiss="modal">Salir</button>
             </div>
           </div>
           </div>
