@@ -1,0 +1,1 @@
+$(document).ready(function(){$(window).bind("scroll",function(){if($(window).scrollTop()>=350){$('.fixDetail').css("display","block");}else{$('.fixDetail').css("display","none");}});});

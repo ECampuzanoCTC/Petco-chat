@@ -1,0 +1,140 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
+.banner__component_holder { 
+	position:relative;
+	
+	.btn-share { 
+		position: absolute;
+		bottom: 7px;
+		right: 7px;
+		
+		.btn { 
+			font-size: 10px;
+			font-weight: 700;
+			padding: 0px 0px 0px 0px;
+			text-transform: none;
+			color: #010101;
+			background: whitesmoke;
+		}
+	}
+}
+
+.fb-login-option {
+	text-align: center;
+    padding: 10px;
+}
+
+.item__list--share--item {
+	display: table;
+    width: 100%;
+    background-color: white;
+    color: black;
+    padding: 10px;
+}
+
+.item__list .item__image__share {
+	width: 10%;
+	padding: 10px;
+}
+
+.item__list .item__image__share > a > img  {
+	width: 65px;
+	height: 65px;
+}
+
+.item__list .item__summary {
+	display: table-cell;
+	vertical-align: middle;
+	width: 70%;
+	padding: 10px;
+}
+
+.item__list .item__share {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	width: 20%;
+	padding: 10px;
+}
+
+
+.share-items {
+	margin-top: 10px;
+}
+
+.share-item {
+	margin-top: -15px;
+}
+
+@media (max-width: 639px) {
+	.item__list--share--item {
+	    width: 100%;
+	    background-color: white;
+	    color: black;
+	    display:grid;
+	    padding-left: 20px;
+	    margin-top: 15px;
+	}
+	
+	.item__list .item__image__share {
+		width: auto;
+		text-align: center;
+	}
+	
+	.item__list .item__summary {
+		vertical-align: middle;
+		width: auto;
+		text-align: center;
+	}
+	
+	.item__list .item__share {
+		text-align: center;
+		margin-top: 15px;
+		width: auto;
+	}
+	
+	.share-items {
+		margin-top: 10px;
+	}
+	
+	.share-item {
+		margin-top: -15px;
+	}
+}
+
+
+.fa {
+  padding: 20px;
+  font-size: 16px;
+  width: 60%;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  text-transform: uppercase;
+  display: block;
+  margin: 10px auto;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}

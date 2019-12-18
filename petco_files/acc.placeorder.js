@@ -1,0 +1,7 @@
+ACC.placeorder={bindAll:function()
+{this.bindPlaceOrder();this.bindShowButton();},bindShowButton:function(){$("#pOWSC").show();$("#pO").show();$("#btnEasy").show();},bindPlaceOrder:function()
+{$("#pOWSC").on("click",function(e)
+{e.preventDefault();ACC.placeorder.hideButton($(this));ACC.common.blockFormAndShowProcessingMessage($(this));ACC.placeorder.hideDivEditStep();$(".securityCodeClass").val($("#SecurityCode").val());$("#placeOrderForm1").unbind('submit').submit();});$("#pO").on('click',function(e){e.preventDefault();ACC.placeorder.hideButton($(this));ACC.common.blockFormAndShowProcessingMessage($(this));ACC.placeorder.hideDivEditStep();$("#placeOrderForm1").unbind('submit').submit();});$("#btnEasy").on('click',function(e){e.preventDefault();ACC.placeorder.hideButton($(this));ACC.common.blockFormAndShowProcessingMessage($(this));ACC.placeorder.hideDivEditStep();$("#placeOrderForm2").unbind('submit').submit();});},disableButton:function(button){$(button).attr("disabled","disabled");$(button).css("text-transform","uppercase");},hideButton:function(button){$(button).hide();},hideDivEditStep:function(){$(".edit").hide();$('.js-checkout-step').bind('click',false);},updatePlaceOrderButton:function()
+{$(".place-order").removeAttr("disabled");},bindSecurityCodeWhatIs:function()
+{$('.security_code_what').bt($("#checkout_summary_payment_div").data("securityWhatText"),{trigger:'click',positions:'bottom',fill:'#efefef',cssStyles:{fontSize:'11px'}});}};$(document).ready(function()
+{ACC.placeorder.bindAll();});

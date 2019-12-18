@@ -1,0 +1,2 @@
+if(document.getElementById("sequence")==null||document.getElementById("sequence")==undefined){}else{var sequenceElement=document.getElementById("sequence");var options={startingStepAnimatesIn:true,autoPlay:false,phaseThreshold:250,preloader:false,reverseWhenNavigatingBackwards:false,keyNavigation:true,fadeStepWhenSkipped:false}
+var mySequence=sequence(sequenceElement,options);}

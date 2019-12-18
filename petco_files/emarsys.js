@@ -1,0 +1,2 @@
+ACC.emarsys={cart:function(){var retrievedObject=localStorage.getItem('carrito');if($(".count").text()==0){retrievedObject=null;ScarabQueue.push(['cart',[]]);}
+else{var carrito=window.location.href;if(carrito.indexOf('en/cart')<1){ScarabQueue.push(['cart',JSON.parse(retrievedObject)]);}}},sendEmail:function(){if(window.location.href.indexOf('gt')==-1){var emailLogin=$("#j_username").val();ScarabQueue.push(['setEmail',emailLogin]);ScarabQueue.push(['go']);}}};$(document).ready(function(){});
