@@ -5691,7 +5691,18 @@ reservados.</span></p>
 
   const customPlugin = CXBus.registerPlugin('Custom');
 </script>
+<style>
 
+    .chat-button{
+        background-color: #2a88c7;
+      }
+      
+      .chat-button-wrapper{
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+      }
+</style>
 
 <div class="chat-button-wrapper ">
   <button class="btn rounded-0 chat-button text-light" type="button" id="chat-button" onclick="customPlugin.command('WebChat.open', getAdvancedConfig());">Chatea con Petco</button>
