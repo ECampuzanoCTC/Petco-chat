@@ -5608,7 +5608,94 @@ reservados.</span></p>
 <button onclick="if (!window.__cfRLUnblockHandlers) return false; topFunction()" id="myBtn" title="Go to top"></button>
 <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"errorBeacon":"bam.nr-data.net","licenseKey":"375fbfdb40","agent":"","beacon":"bam.nr-data.net","applicationTime":269,"applicationID":"333075457","transactionName":"MgNXbEBRC0ZRBRBRCgtJZkhAWQtScwkKTBcKClldQB8tWl0DNFkCACVaVkZCCllcAxYXDQoLUA==","queueTime":0}</script><script defer="" src="./petco_files/beacon.min.js" data-cf-beacon="{&quot;rayId&quot;:&quot;546c965aeebaec36&quot;,&quot;version&quot;:&quot;2019.10.2&quot;,&quot;startTime&quot;:1576624403887}"></script>
 
+<script src="https://apps.mypurecloud.com/widgets/9.0/cxbus.min.js" onload="javascript:CXBus.configure({debug:false,pluginsPath:'https://apps.mypurecloud.com/widgets/9.0/plugins/'}); CXBus.loadPlugin('widgets-core');"></script>
 
+<script>
+  window._genesys = {
+    "widgets": {
+      "webchat": {
+        "transport": {
+          "type": "purecloud-v2-sockets",
+          "dataURL": "https://api.mypurecloud.com",
+          "deploymentKey": "6fb34ce5-a64a-4333-8940-df06789c0089",
+          "orgGuid": "24850012-c6c5-4cfe-a807-1b21cd1e1b7b",
+          "interactionData": {
+            "routing": {
+              "targetType": "QUEUE",
+              "targetAddress": "CHAT",
+              "priority": 2
+            }
+          }
+        },
+        "userData": {
+          "addressStreet": "910 Heot Parkway",
+          "addressCity": "Ewemuze",
+          "addressPostalCode": "83830",
+          "addressState": "AZ",
+          "phoneNumber": "(719) 525-6847",
+          "customField1Label": "",
+          "customField1": "",
+          "customField2Label": "",
+          "customField2": "",
+          "customField3Label": "",
+          "customField3": ""
+        }
+      }
+    }
+  };
+
+  function getAdvancedConfig() {
+    return {
+      "form": {
+        "autoSubmit": false,
+        "firstname": "Winnie",
+        "lastname": "Vermeulen",
+        "email": "vifi@sibipuz.ee",
+        "subject": ""
+      },
+      "formJSON": {
+        "wrapper": "<table></table>",
+        "inputs": [
+          {
+            "id": "cx_webchat_form_firstname",
+            "name": "firstname",
+            "maxlength": "100",
+            "placeholder": "Required",
+            "label": "First Name"
+          },
+          {
+            "id": "cx_webchat_form_lastname",
+            "name": "lastname",
+            "maxlength": "100",
+            "placeholder": "Required",
+            "label": "Last Name"
+          },
+          {
+            "id": "cx_webchat_form_email",
+            "name": "email",
+            "maxlength": "100",
+            "placeholder": "Optional",
+            "label": "Email"
+          },
+          {
+            "id": "cx_webchat_form_subject",
+            "name": "subject",
+            "maxlength": "100",
+            "placeholder": "Optional",
+            "label": "Subject"
+          }
+        ]
+      }
+    };
+  }
+
+  const customPlugin = CXBus.registerPlugin('Custom');
+</script>
+
+
+<div class="chat-button-wrapper ">
+  <button class="btn rounded-0 chat-button text-light" type="button" id="chat-button" onclick="customPlugin.command('WebChat.open', getAdvancedConfig());">Chatea con Petco</button>
+</div>
 <img src="./petco_files/3830875849020614656" width="1" height="1">
 <script type="text/javascript" id="">(function(){window._pxAppId="PXP0j9leFM";var b=document.getElementsByTagName("script")[0],a=document.createElement("script");a.async=1;a.src="/P0j9leFM/init.js";b.parentNode.insertBefore(a,b)})();</script>
 <noscript>
