@@ -5644,14 +5644,14 @@ reservados.</span></p>
     }
   };
 
-  function getAdvancedConfig() {
+  function getAdvancedConfig(){
     return {
       "form": {
         "autoSubmit": false,
-        "firstname": "Winnie",
-        "lastname": "Vermeulen",
-        "email": "vifi@sibipuz.ee",
-        "subject": ""
+        "firstname": $('input[name="firstName"]').val(),
+        "lastname": $('input[name="lastName"]').val(),
+        "email": $('input[name="email"]').val(),
+        "petname": $('input[name="petName"]').val()
       },
       "formJSON": {
         "wrapper": "<table></table>",
@@ -5661,28 +5661,28 @@ reservados.</span></p>
             "name": "firstname",
             "maxlength": "100",
             "placeholder": "Required",
-            "label": "First Name"
+            "label": "Nombre"
           },
           {
             "id": "cx_webchat_form_lastname",
             "name": "lastname",
             "maxlength": "100",
             "placeholder": "Required",
-            "label": "Last Name"
+            "label": "Apellidos"
           },
           {
             "id": "cx_webchat_form_email",
             "name": "email",
             "maxlength": "100",
             "placeholder": "Optional",
-            "label": "Email"
+            "label": "Teléfono"
           },
           {
-            "id": "cx_webchat_form_subject",
-            "name": "subject",
+            "id": "cx_webchat_form_petname",
+            "name": "petname",
             "maxlength": "100",
             "placeholder": "Optional",
-            "label": "Subject"
+            "label": "Nombre mascota"
           }
         ]
       }
