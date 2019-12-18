@@ -5122,9 +5122,10 @@ h3.centrar.lnuevo {
 <p>Términos y Condiciones</p>
 </a>
 <div class="espaciofooter">&nbsp;</div>
-<a href="mailto:info@petco.com.mx">
+<a href="#"  type="button" style="background-color: transparent; color: blue;" data-toggle="modal" data-target="#myModal">
 <p>Contáctanos</p>
-</a> <a href="https://www.petco.com.mx/petco/en/BolsaTrabajo">
+</a>
+<a href="https://www.petco.com.mx/petco/en/BolsaTrabajo">
 <p>Bolsa de Trabajo</p>
 </a> <a href="https://www.petco.com.mx/petco/en/politicasPrivacidad">
 <p>Aviso de privacidad</p>
@@ -5725,6 +5726,11 @@ reservados.</span></p>
                                <img src="/P0j9leFM/xhr/api/v1/collector/noScript.gif?appId=PXP0j9leFM" alt="PxPixel">
                 </div>
 </noscript>
+<script>
+    $("#contactoLink").click(function(){
+        console.log("Contacto");
+    })
+</script>
 
 <div style="display: none; visibility: hidden;"><script type="text/javascript">var ssaUrl=("https:"==document.location.protocol?"https://":"http://")+"pixel.sitescout.com/iap/95badb87198bfeb1";(new Image).src=ssaUrl;
 (function(a){var c=("https:"==document.location.protocol?"https://":"http://")+"pixel.sitescout.com/dmp/asyncPixelSync",b=a.createElement("iframe");(b.frameElement||b).style.cssText="width: 0; height: 0; border: 0;";b.src="javascript:false";a.body.appendChild(b);a=b.contentWindow.document;a.open().write("\x3cbody onload\x3d\"window.location.href\x3d'"+c+"'\"\x3e");a.close()})(document);</script></div><iframe src="javascript:false" style="width: 0px; height: 0px; border: 0px;" src="./petco_files/saved_resource(11).html"></iframe><div style="display: none; visibility: hidden;"><script>document.write("\x3ciframe src\x3d'https://us.creativecdn.com/tags?id\x3dpr_gUD1qn4NxehsCkjgnaKm_home' width\x3d'1' height\x3d'1' scrolling\x3d'no' frameBorder\x3d'0' style\x3d'display: none;'\x3e\x3c/iframe\x3e");</script><iframe src="./petco_files/tags.html" width="1" height="1" scrolling="no" frameborder="0" style="display: none;"></iframe></div><div style="display: none; visibility: hidden;"><script>document.write("\x3ciframe src\x3d'https://us.creativecdn.com/tags?id\x3dpr_gUD1qn4NxehsCkjgnaKm\x26amp;ncm\x3d1' width\x3d'1' height\x3d'1' scrolling\x3d'no' frameBorder\x3d'0' style\x3d'display: none;'\x3e\x3c/iframe\x3e");</script><iframe src="./petco_files/tags(1).html" width="1" height="1" scrolling="no" frameborder="0" style="display: none;"></iframe></div>
@@ -5741,3 +5747,44 @@ reservados.</span></p>
     <img height="1" width="1" src="https://www.facebook.com/tr?id=246039902747233&amp;ev=PageView
     &amp;noscript=1">
     </noscript>
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+            </div>
+            <div class="modal-body">
+              <div class="forma-contacto" >
+                <form style="width: 100%;">
+                  <div class="form-group">
+                    <input name="firstName" type="text" class="form-control" placeholder="Nombre">
+                  </div>
+                  <div class="form-group">
+                    <input name="lastName" type="text" class="form-control" placeholder="Apellidos">
+                  </div>
+                  <div class="form-group">
+                    <input name="phoneNumber" type="text" class="form-control" placeholder="Teléfono">
+                  </div>
+                  <div class="form-group">
+                    <input name="email" type="email" class="form-control" placeholder="Correo electrónico">
+                  </div>
+                  <div class="form-group">
+                    <input name="petName" type="text" class="form-control" placeholder="Nombre de tu mascota">
+                  </div>
+                  <div class="form-group">
+                    <textarea name="" id="" cols="30" rows="4" class="subject form-control" placeholder="Tu mensaje"></textarea>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <a href="mailto:cc@petco.mypurecloud.com" class="button btn rounded-0 btn-primary"
+                 >Envia un correo</a>
+              <div class="button btn rounded-0 btn-primary" id="chat-button-form" onclick="customPlugin.command('WebChat.open', getAdvancedConfig());">Chatea con Petco</div>
+              <button type="button" class="btn rounded-0 btn-secondary" data-dismiss="modal">Cancelar</button>
+            </div>
+          </div>
+          </div>
+      </div>
