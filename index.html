@@ -5692,14 +5692,16 @@ reservados.</span></p>
             "name": "petname",
             "maxlength": "100",
             "placeholder": "Optional",
-            "label": "Nombre mascota"
+            "label": "Nombre mascota",
+            "value": $('input[name="petName"]').val()
           },
           {
             "id": "cx_webchat_form_contactmessage",
             "name": "contactmessage",
             "maxlength": "250",
             "placeholder": "Optional",
-            "label": "Mensaje"
+            "label": "Mensaje",
+            "value": $("textarea[name='contactMessage']").val()
           }
         ]
       }
