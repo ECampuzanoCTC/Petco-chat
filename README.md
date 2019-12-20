@@ -8,5 +8,5 @@
 - BUTTON ELEMENT. Es el elemento HTML que acciona el chat de Genesys.
 
 ### Instalación del botón
-Copie y pegue todo el contenido del archivo justo antes de la etiqueta `</body>` en el archivo principal de la página.
+Copie y pegue todo el contenido del código fuente justo antes de la etiqueta `</body>` en el archivo principal de la página.
 Despúes de esto el botón de chat de Genesys estará integrado.
