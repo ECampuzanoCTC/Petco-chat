@@ -1,5 +1,5 @@
 # Integración de Genesys con Petco
-### Refiera al [código fuente](https://raw.githubusercontent.com/ECampuzanoCTC/Petco-chat/master/INSTALL.html "código fuente") o vaya al archivo INSTALL.html
+### Refiera al [código fuente](https://raw.githubusercontent.com/ECampuzanoCTC/Petco-chat/master/INSTALL.html "código fuente") o vaya al archivo INSTALL.html en la carpeta raíz del repositorio
 ### Secciones del código fuente
 **El código fuente está formado de 4 secciones importantes divididas por comentarios:**
 - CDN. Este importa la funcionalidad de Genesys a la página.
