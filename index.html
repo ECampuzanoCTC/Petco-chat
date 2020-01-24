@@ -5642,6 +5642,7 @@ reservados.</span></p>
           "email": $("input[name='email']").val(),
           "phoneNumber": $("input[name='phoneNumber']").val(),
           "petName": $("input[name='petName']").val(),
+          "motivo": $('#cx_webchat_form_motivo').val(),
           "contactMessage": $("input[name='contactMessage']").val()
         }
       }
@@ -5653,10 +5654,10 @@ reservados.</span></p>
       "form": {
         "autoSubmit": false,
         "firstname": $('input[name="firstName"]').val(),
-        "lastname": $('input[name="lastName"]').val(),
         "email": $('input[name="email"]').val(),
         "phonenumber": $('input[name="phoneNumber"]').val(),
         "petname": $('input[name="petName"]').val(),
+        "motivo": $('#cx_webchat_form_motivo').val(),
         "body": $('textarea[name="contactMessage"]').val()
       },
       "formJSON": {
@@ -5668,13 +5669,6 @@ reservados.</span></p>
             "maxlength": "100",
             "placeholder": "Requerido",
             "label": "Nombre"
-          },
-          {
-            "id": "cx_webchat_form_lastname",
-            "name": "lastname",
-            "maxlength": "100",
-            "placeholder": "Requerido",
-            "label": "Apellidos"
           },
           {
             "id": "cx_webchat_form_email",
@@ -5698,6 +5692,30 @@ reservados.</span></p>
             "placeholder": "Opcional",
             "label": "Nombre mascota",
             "value": $('input[name="petName"]').val()
+          },
+          {
+            "id": "cx_webchat_form_motivo",
+            "name": "motivo",
+            "label": "Motivo",
+            "type": "select",
+            "options":[
+                {
+                    value: "easy_buy",
+                    text: "Easy Buy"
+                },
+                {
+                    value: "veterinario",
+                    text: "Veterinario"
+                },
+                {
+                    value: "dudas_compra",
+                    text: "Dudas sobre compra"
+                },
+                {
+                    value: "seguimiento_pedido",
+                    text: "Seguimiento a pedido"
+                }
+            ]
           },
           {
             "id": "cx_webchat_form_contactmessage",
