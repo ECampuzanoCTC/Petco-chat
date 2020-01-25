@@ -29,30 +29,28 @@
           }
         },
         "userData": {
-          "addressStreet": "910 Heot Parkway",
-          "addressCity": "Ewemuze",
-          "addressPostalCode": "83830",
-          "addressState": "AZ",
-          "phoneNumber": "(719) 525-6847",
-          "customField1Label": "",
-          "customField1": "",
-          "customField2Label": "",
-          "customField2": "",
-          "customField3Label": "",
-          "customField3": ""
+          "firstName": $("input[name='firstName']").val(),
+          "lastName": $("input[name='lastName']").val(),
+          "email": $("input[name='email']").val(),
+          "phoneNumber": $("input[name='phoneNumber']").val(),
+          "petName": $("input[name='petName']").val(),
+          "motivo": $('#cx_webchat_form_motivo').val(),
+          "contactMessage": $("input[name='contactMessage']").val()
         }
       }
     }
   };
 
-  function getAdvancedConfig() {
+  function getAdvancedConfig(){
     return {
       "form": {
         "autoSubmit": false,
         "firstname": $('input[name="firstName"]').val(),
-        "lastname": $('input[name="lastName"]').val(),
         "email": $('input[name="email"]').val(),
-        "petname": $('input[name="petName"]').val()
+        "phonenumber": $('input[name="phoneNumber"]').val(),
+        "petname": $('input[name="petName"]').val(),
+        "motivo": $('#cx_webchat_form_motivo').val(),
+        "body": $('textarea[name="contactMessage"]').val()
       },
       "formJSON": {
         "wrapper": "<table></table>",
@@ -61,30 +59,63 @@
             "id": "cx_webchat_form_firstname",
             "name": "firstname",
             "maxlength": "100",
-            "placeholder": "Required",
+            "placeholder": "Requerido",
             "label": "Nombre"
-          },
-          {
-            "id": "cx_webchat_form_lastname",
-            "name": "lastname",
-            "maxlength": "100",
-            "placeholder": "Required",
-            "label": "Apellidos"
           },
           {
             "id": "cx_webchat_form_email",
             "name": "email",
             "maxlength": "100",
-            "placeholder": "Optional",
-            "label": "Teléfono"
+            "placeholder": "Requerido",
+            "label": "Email"
+          },
+          {
+            "id": "cx_webchat_form_phonenumber",
+            "name": "phonenumber",
+            "maxlength": "100",
+            "placeholder": "Opcional",
+            "label": "Teléfono",
+            "value": $('input[name="phoneNumber"]').val()
           },
           {
             "id": "cx_webchat_form_petname",
             "name": "petname",
             "maxlength": "100",
-            "placeholder": "Optional",
+            "placeholder": "Opcional",
             "label": "Nombre mascota",
             "value": $('input[name="petName"]').val()
+          },
+          {
+            "id": "cx_webchat_form_motivo",
+            "name": "motivo",
+            "label": "Motivo",
+            "type": "select",
+            "options":[
+                {
+                    value: "easy_buy",
+                    text: "Easy Buy"
+                },
+                {
+                    value: "veterinario",
+                    text: "Veterinario"
+                },
+                {
+                    value: "dudas_compra",
+                    text: "Dudas sobre compra"
+                },
+                {
+                    value: "seguimiento_pedido",
+                    text: "Seguimiento a pedido"
+                }
+            ]
+          },
+          {
+            "id": "cx_webchat_form_contactmessage",
+            "name": "contactmessage",
+            "maxlength": "250",
+            "placeholder": "Opcional",
+            "label": "Mensaje",
+            "value": $("textarea[name='contactMessage']").val()
           }
         ]
       }
