@@ -5637,13 +5637,15 @@ reservados.</span></p>
           }
         },
         "userData": {
-          "firstName": $("input[name='firstName']").val(),
-          "lastName": $("input[name='lastName']").val(),
-          "email": $("input[name='email']").val(),
-          "phoneNumber": $("input[name='phoneNumber']").val(),
-          "petName": $("input[name='petName']").val(),
-          "motivo": $('#cx_webchat_form_motivo').val(),
-          "contactMessage": $("input[name='contactMessage']").val()
+            "firstName": $("input[name='firstName']").val(),
+            "email": $("input[name='email']").val(),
+            "phoneNumber": "",
+            "customField1Label":"Nombre mascota",
+            "customField1": "",
+            "customField2Label":"Motivo",
+            "customField2": "",
+            "customField3Label":"Mensaje",
+            "customField3": ""
         }
       }
     }
@@ -5656,9 +5658,9 @@ reservados.</span></p>
         "firstname": $('input[name="firstName"]').val(),
         "email": $('input[name="email"]').val(),
         "phonenumber": $('input[name="phoneNumber"]').val(),
-        "petname": $('input[name="petName"]').val(),
-        "motivo": $('#cx_webchat_form_motivo').val(),
-        "body": $('textarea[name="contactMessage"]').val()
+        "petname": $('input[name="customField1"]').val(),
+        "motivo": $('#cx_webchat_form_customField2').val(),
+        "contactMessage": $('textarea[name="customField3"]').val()
       },
       "formJSON": {
         "wrapper": "<table></table>",
@@ -5678,53 +5680,53 @@ reservados.</span></p>
             "label": "Email"
           },
           {
-            "id": "cx_webchat_form_phonenumber",
-            "name": "phonenumber",
+            "id": "cx_webchat_form_phoneNumber",
+            "name": "phoneNumber",
             "maxlength": "100",
             "placeholder": "Opcional",
             "label": "Teléfono",
-            "value": $('input[name="phoneNumber"]').val()
+            "value": ""
           },
           {
-            "id": "cx_webchat_form_petname",
-            "name": "petname",
+            "id": "cx_webchat_form_customField1",
+            "name": "customField1",
             "maxlength": "100",
             "placeholder": "Opcional",
             "label": "Nombre mascota",
             "value": $('input[name="petName"]').val()
           },
           {
-            "id": "cx_webchat_form_motivo",
-            "name": "motivo",
+            "id": "cx_webchat_form_customField2",
+            "name": "customField2",
             "label": "Motivo",
             "type": "select",
             "options":[
                 {
-                    value: "seguimiento_pedido",
+                    value: "Seguimiento a pedido",
                     text: "Seguimiento a pedido"
                 },
                 {
-                    value: "dudas_compra",
+                    value: "Dudas sobre compra",
                     text: "Dudas sobre compra"
                 },
                 {
-                    value: "veterinario",
+                    value: "Veterinario",
                     text: "Veterinario"
                 },
                 {
-                    value: "easy_buy",
+                    value: "Easy Buy",
                     text: "Easy Buy"
                 },
                 
             ]
           },
           {
-            "id": "cx_webchat_form_contactmessage",
-            "name": "contactmessage",
+            "id": "cx_webchat_form_customField3",
+            "name": "customField3",
             "maxlength": "250",
             "placeholder": "Opcional",
             "label": "Mensaje",
-            "value": $("textarea[name='contactMessage']").val()
+            "value": $("textarea[name='customField3']").val()
           }
         ]
       }
