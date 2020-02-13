@@ -5651,7 +5651,7 @@ reservados.</span></p>
       }
     }
   };
-
+  
   function getAdvancedConfig(){
     return {
       "form": {
@@ -5671,6 +5671,13 @@ reservados.</span></p>
             "name": "firstname",
             "maxlength": "100",
             "placeholder": "Requerido",
+            "validate": function(event, form, input, label, $, CXBus, Common){
+                if(!$)
+                    return;
+                
+                let val = $('#cx_webchat_form_firstname').val()
+                return val !== "";
+            },
             "label": "Nombre"
           },
           {
@@ -5678,14 +5685,28 @@ reservados.</span></p>
             "name": "email",
             "maxlength": "100",
             "placeholder": "Requerido",
-            "label": "Email"
+            "label": "Email",
+            "validate": function(event, form, input, label, $, CXBus, Common){
+                if(!$)
+                    return;
+                
+                let val = $('#cx_webchat_form_email').val()
+                return val !== "";
+            }
           },
           {
             "id": "cx_webchat_form_phoneNumber",
             "name": "phoneNumber",
             "maxlength": "100",
-            "placeholder": "Opcional",
+            "validate": function(event, form, input, label, $, CXBus, Common){
+                if(!$)
+                    return;
+                
+                let val = $('#cx_webchat_form_phoneNumber').val()
+                return val !== "";
+            },
             "label": "Teléfono",
+            "placeholder": "Requerido",
             "value": ""
           },
           {
@@ -5716,7 +5737,7 @@ reservados.</span></p>
                 },
                 {
                     value: "Easy Buy",
-                    text: "Easy Buy"
+                    text: "Petco Easy Buy"
                 },
                 
             ]
@@ -5762,6 +5783,12 @@ reservados.</span></p>
           width: 54px !important;
           height: 64px !important;
       }
+
+      .cx-form-inputs table tr th{
+          padding-top: 10px;
+          background-color: white;
+      }
+      
       .cx-titlebar .cx-icon svg .cx-svg-icon-tone1 path{
         d: path('M59.7,8.9c0-1.8-1.5-3.4-3.4-3.4H7.6c-1.9,0-3.4,1.5-3.4,3.4v31.6c0,1.9,1.5,3.4,3.4,3.4H27l10.9,14.6V43.9h18.6c1.8,0,3.4-1.5,3.4-3.4V25.4L59.7,8.9z');
         fill: none;
